@@ -9,7 +9,7 @@ export default function HeroSection({ text, socialLinks }) {
           <p className="mb-6 text-base leading-relaxed text-slate-300 sm:text-lg">{text.hero_desc}</p>
           <div className="mb-8 flex flex-wrap gap-4">
             <a href="#contact" className="rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition hover:bg-indigo-500">{text.hero_btn_contact}</a>
-            <a href="/cv/my-cv.pdf" download="Ali-Hammadi-CV.pdf" className="rounded-xl border border-slate-700 bg-slate-900 px-5 py-3 font-semibold text-slate-200 transition hover:border-indigo-500 hover:text-indigo-400">{text.hero_cv}</a>
+            <a href="/cv/aliehammadi-resume.pdf" download="Ali-Hammadi-CV.pdf" className="rounded-xl border border-slate-700 bg-slate-900 px-5 py-3 font-semibold text-slate-200 transition hover:border-indigo-500 hover:text-indigo-400">{text.hero_cv}</a>
           </div>
           <SocialLinks links={socialLinks} />
         </div>
