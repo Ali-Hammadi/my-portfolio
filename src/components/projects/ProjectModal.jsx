@@ -1,15 +1,26 @@
-export default function ProjectModal({ project, caseStudy, selectedProject, text, onClose }) {
+import { useEffect } from 'react';
+
+export default function ProjectModal({ project, caseStudy, text, onClose }) {
+  useEffect(() => {
+    if (!project) return undefined;
+    const onKeyDown = (event) => { if (event.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [project, onClose]);
+
   if (!project || !caseStudy) return null;
 
-  const tags = selectedProject === 'telmi'
-    ? ['Flutter', 'Daily Planning', 'Care Support', 'Mobile App']
-    : selectedProject === 'tfouki'
-      ? ['Flutter', 'Education', 'School App', 'Student Management']
-      : ['Flutter', 'Healthcare', 'Doctor Dashboard', 'Patient App'];
+  const tags = project.tags ?? [];
+  const linkItems = [
+    ['github', 'GitHub', 'fa-brands fa-github'],
+    ['store', 'Store', 'fa-brands fa-google-play'],
+    ['demo', 'Live demo', 'fa-solid fa-arrow-up-right-from-square'],
+    ['video', 'Video', 'fa-solid fa-circle-play'],
+  ].filter(([key]) => project.links?.[key]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-3 backdrop-blur-sm sm:p-4" onClick={onClose}>
-      <div className="max-h-[92vh] w-full max-w-5xl overflow-auto rounded-[24px] border border-slate-700 bg-slate-900 shadow-2xl shadow-slate-950/80" onClick={(event) => event.stopPropagation()}>
+      <div role="dialog" aria-modal="true" aria-label={project.name} className="max-h-[92vh] w-full max-w-5xl overflow-auto rounded-[24px] border border-slate-700 bg-slate-900 shadow-2xl shadow-slate-950/80" onClick={(event) => event.stopPropagation()}>
         <div className="sticky top-0 z-10 flex items-center justify-between gap-3 border-b border-slate-800 bg-slate-900/95 px-4 py-3 backdrop-blur-sm sm:px-6">
           <div><p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-indigo-400">{text.case_study}</p><h3 className="mt-1 text-xl font-bold text-white sm:text-2xl">{project.name}</h3></div>
           <button type="button" onClick={onClose} className="rounded-full border border-slate-700 bg-slate-800 px-3 py-1.5 text-xs font-medium text-slate-200 transition hover:bg-slate-700 sm:px-4 sm:text-sm">{text.close}</button>
@@ -18,7 +29,7 @@ export default function ProjectModal({ project, caseStudy, selectedProject, text
         <div className="p-4 sm:p-6">
           <div className="mb-6 flex flex-col gap-6">
             <div className="rounded-[28px] border border-slate-800 bg-slate-950 p-3 sm:p-4"><div className="flex h-[220px] w-full items-center justify-center rounded-[22px] bg-slate-900 p-2 sm:h-[320px] md:h-[420px]"><img src={project.cover} alt={`${project.name} cover`} className="h-full w-full rounded-2xl object-contain" /></div></div>
-            <div className="rounded-[22px] border border-slate-800 bg-slate-950 p-5"><p className="text-sm leading-relaxed text-slate-300 sm:text-base">{project.summary}</p><div className="mt-5 flex flex-wrap gap-2">{tags.map((tag) => <span key={tag} className="rounded-full border border-indigo-500/25 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300">{tag}</span>)}</div></div>
+            <div className="rounded-[22px] border border-slate-800 bg-slate-950 p-5"><p className="text-sm leading-relaxed text-slate-300 sm:text-base">{project.summary}</p><div className="mt-5 flex flex-wrap gap-2">{tags.map((tag) => <span key={tag} className="rounded-full border border-indigo-500/25 bg-indigo-500/10 px-3 py-1 text-xs font-medium text-indigo-300">{tag}</span>)}</div>{linkItems.length > 0 && <div className="mt-5 flex flex-wrap gap-3">{linkItems.map(([key, label, icon]) => <a key={key} href={project.links[key]} target="_blank" rel="noreferrer" className="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900 px-4 py-2 text-sm font-medium text-slate-200 transition hover:border-indigo-500 hover:text-indigo-400"><i className={icon}></i>{label}</a>)}</div>}</div>
           </div>
 
           <div className="grid auto-cols-[minmax(150px,1fr)] grid-flow-col gap-4 overflow-x-auto overscroll-x-contain pb-3 snap-x sm:auto-cols-[minmax(180px,1fr)] xl:auto-cols-[minmax(0,1fr)]">

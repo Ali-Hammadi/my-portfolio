@@ -5,7 +5,7 @@ export const socialLinks = [
     { label: 'WhatsApp', href: 'https://wa.me/963937472856', icon: 'fa-brands fa-whatsapp' },
     { label: 'Telegram', href: 'https://t.me/aliehammadi', icon: 'fa-brands fa-telegram' },
     { label: 'Email', href: 'mailto:hamadea524@gmail.com', icon: 'fa-solid fa-envelope' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aliehammadi?utm_source=share_via&utm_content=profile&utm_medium=member_android', icon: 'fa-brands fa-linkedin' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/aliehammadi', icon: 'fa-brands fa-linkedin' },
 ];
 
 export const projectCatalog = {
@@ -13,9 +13,11 @@ export const projectCatalog = {
         name: 'Telmi',
         cover: '/images/telmi/mockup_telmi.jpeg',
         caseStudy: caseStudies.telmi,
+        tags: ['Flutter', 'Wear OS', 'Firebase', 'WebRTC', 'Clean Architecture', 'BLoC/Cubit'],
+        links: { github: '', store: '', demo: '', video: '' },
         summary: {
-            en: 'A personal productivity and care platform designed to support daily routines, communication, reminders, and wellness for people with special needs, seniors, and busy families.',
-            ar: 'منصة شخصية تهدف إلى تنظيم الروتين اليومي، دعم التواصل، التذكير، وتعزيز الجودة الحياتية للأشخاص ذوي الاحتياجات الخاصة وكبار السن والعائلات المشغولة.',
+            en: 'A connected communication and support ecosystem for children with ASD and speech delays: a parent mobile app paired with a child Wear OS smartwatch app, offering visual AAC communication, live location, routines, and secure video calls.',
+            ar: 'منظومة تواصل ودعم متصلة للأطفال ضمن طيف التوحد وتأخر الكلام: تطبيق للوالدين وتطبيق للطفل على ساعة ذكية بنظام Wear OS، مع تواصل بصري AAC وتتبع للموقع وروتين ومكالمات فيديو آمنة.',
         },
         gallery: [
             '/images/telmi/photo_1_2026-10-01_12-00-45.jpeg',
@@ -30,9 +32,11 @@ export const projectCatalog = {
         name: 'Tfouki',
         cover: '/images/tfouki/mockup_tfouki.jpeg',
         caseStudy: caseStudies.tfouki,
+        tags: ['Flutter', 'Django REST', 'PostgreSQL', 'Cubit', 'Clean Architecture'],
+        links: { github: '', store: '', demo: '', video: '' },
         summary: {
-            en: 'A school management mobile app created for educational institutions to streamline student administration, academic organization, schedules, and daily workflows in one clear experience.',
-            ar: 'تطبيق لإدارة المدارس يساعد المؤسسات التعليمية على تنظيم الطلاب، الجدول الدراسي، والمهام اليومية في تجربة موحدة واضحة وسهلة الاستخدام.',
+            en: 'A mobile learning and examination platform for schools: private video lessons, timed multiple-choice exams organized by subject, term, and chapter, and student progress tracking, built with Flutter and Django REST.',
+            ar: 'منصة موبايل تعليمية وامتحانية للمدارس: دروس فيديو خاصة، واختبارات اختيار من متعدد بمؤقت مصنفة حسب المادة والفصل والجزء، وتتبع لتقدم الطالب، مبنية بـ Flutter وDjango REST.',
         },
         gallery: [
             '/images/tfouki/tafawwoq-educational-app-1.jpeg',
@@ -47,9 +51,11 @@ export const projectCatalog = {
         name: 'Afiete',
         cover: '/images/afiete/afiete_mockup.jpeg',
         caseStudy: caseStudies.afiete,
+        tags: ['Flutter', 'Django REST', 'PostgreSQL', 'Cubit', 'Clean Architecture'],
+        links: { github: '', store: '', demo: '', video: '' },
         summary: {
-            en: 'Afiete is a mental health and healthcare platform for doctors and patients, designed to manage appointments, patient records, medication instructions, follow-ups, and treatment schedules in a clear and secure workflow.',
-            ar: 'Afiete هو نظام طبي للصحة النفسية والخدمات الصحية للمريض والطبيب، مصمم لإدارة المواعيد، ملفات المرضى، وصفات الأدوية، المتابعة، والجداول العلاجية بواجهة واضحة وآمنة.',
+            en: 'A digital mental-health platform connecting users with psychological specialists, with appointment booking, psychological assessments, digital records, communication, and push notifications, built with Flutter and Django REST.',
+            ar: 'منصة رقمية للصحة النفسية تربط المستخدمين بأخصائيين نفسيين، مع حجز المواعيد والتقييمات النفسية والسجلات الرقمية والتواصل والإشعارات الفورية، مبنية بـ Flutter وDjango REST.',
         },
         gallery: [
             '/images/afiete/photo_1_2026-10-01_12-23-53.jpeg',
@@ -63,15 +69,9 @@ export const projectCatalog = {
 };
 
 export const projectList = [
-    { id: 'telmi', title: 'Telmi', cover: '/images/telmi/mockup_telmi.jpeg', short: { en: 'A special-needs daily-life support app with smart routines and communication tools.', ar: 'تطبيق لدعم الروتين اليومي والتواصل للأشخاص ذوي الاحتياجات الخاصة.' } },
-    { id: 'tfouki', title: 'Tfouki', cover: '/images/tfouki/mockup_tfouki.jpeg', short: { en: 'School app designed to manage students, schedules, and academic operations efficiently.', ar: 'تطبيق تعليمي لإدارة الطلاب والجدول الدراسي والمهام الدراسية بسهولة.' } },
-    { id: 'afiete', title: 'Afiete', cover: '/images/afiete/afiete_mockup.jpeg', short: { en: 'Mental health and care platform for doctors and patients with appointments, medication tracking, and follow-ups.', ar: 'منصة صحية نفسية للرعاية الطبية للطبيب والمريض مع المواعيد وتتبّع الأدوية والمتابعة.' } },
-];
-
-export const initialFeedback = [
-    { name: 'Sarah', role: 'Product Owner', message: 'The work is polished, professional, and very easy to use. The mobile experience feels premium and thoughtful.' },
-    { name: 'Mohammed', role: 'Client', message: 'Very clear interfaces and strong attention to details. The app feels reliable and modern on every screen.' },
-    { name: 'Lina', role: 'Teacher', message: 'The design is clean, consistent, and functional. It makes complex information easy to understand for users.' },
+    { id: 'telmi', title: 'Telmi', cover: '/images/telmi/mockup_telmi.jpeg', short: { en: 'Parent app + child Wear OS smartwatch app supporting children with ASD and speech delays.', ar: 'تطبيق للوالدين وتطبيق للطفل على ساعة Wear OS لدعم الأطفال ضمن طيف التوحد وتأخر الكلام.' } },
+    { id: 'tfouki', title: 'Tfouki', cover: '/images/tfouki/mockup_tfouki.jpeg', short: { en: 'School learning platform with private video lessons, timed MCQ exams, and progress tracking.', ar: 'منصة تعليمية للمدارس بدروس فيديو خاصة واختبارات MCQ مؤقتة وتتبع للتقدم.' } },
+    { id: 'afiete', title: 'Afiete', cover: '/images/afiete/afiete_mockup.jpeg', short: { en: 'Mental-health platform connecting users with specialists: appointments, assessments, and digital records.', ar: 'منصة صحة نفسية تربط المستخدمين بأخصائيين: مواعيد وتقييمات وسجلات رقمية.' } },
 ];
 
 export const skillGroups = ( text ) => [

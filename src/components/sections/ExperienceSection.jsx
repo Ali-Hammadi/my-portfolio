@@ -6,9 +6,9 @@ export default function ExperienceSection({ text }) {
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
           <SectionHeading>{text.exp_heading}</SectionHeading>
-          <div className="space-y-6 border-l-2 border-slate-800 pl-4">
+          <div className="space-y-6 border-s-2 border-slate-800 ps-4">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">Aug 2024 – Present</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">{text.exp_1_date}</span>
               <h3 className="mt-2 text-lg font-semibold text-white">{text.exp_1_title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-400">{text.exp_1_desc}</p>
             </div>
@@ -21,9 +21,9 @@ export default function ExperienceSection({ text }) {
         </div>
         <div>
           <SectionHeading>{text.edu_heading}</SectionHeading>
-          <div className="space-y-6 border-l-2 border-slate-800 pl-4">
+          <div className="space-y-6 border-s-2 border-slate-800 ps-4">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">2021 – Expected 2027</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-400">{text.edu_1_date}</span>
               <h3 className="mt-2 text-lg font-semibold text-white">{text.edu_1_title}</h3>
               <p className="mt-2 text-sm text-slate-400">{text.edu_1_desc}</p>
             </div>

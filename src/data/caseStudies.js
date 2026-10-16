@@ -53,13 +53,13 @@ const caseStudies = {
     },
     tfouki: {
         en: {
-            overview: 'Tafouki (School on your mobile screen) is a digital educational and examination platform that helps schools deliver private video lessons, interactive exams, and real-time student progress tracking through a structured mobile experience.',
+            overview: 'Tfouki (School on your mobile screen) is a digital educational and examination platform that helps schools deliver private video lessons, interactive exams, and real-time student progress tracking through a structured mobile experience.',
             problem: [
                 'Students need a more organized digital way to follow school curricula and assessments.',
                 'Schools need timed MCQ exams categorized by subject, term, and chapter.',
                 'Teachers and students need private educational video content and clear progress metrics.',
             ],
-            solution: 'Tafouki organizes the student journey from learning to assessment. It supports student accounts, categorized subjects, private school-uploaded video lessons, timed multiple-choice exams, progress percentages, notes, and saved items through a Flutter mobile app connected to Django REST APIs.',
+            solution: 'Tfouki organizes the student journey from learning to assessment. It supports student accounts, categorized subjects, private school-uploaded video lessons, timed multiple-choice exams, progress percentages, notes, and saved items through a Flutter mobile app connected to Django REST APIs.',
             role: 'My main responsibility was mobile application development and backend integration. I developed the Flutter application, integrated REST APIs, implemented data retrieval and CRUD operations, managed states with Cubit, applied Clean Architecture, transformed API responses into models, connected video, exam, and progress features, and tested the integration with Postman. UI/UX design was not my primary responsibility; the implementation followed Figma designs.',
             stack: [
                 'Flutter', 'Dart', 'Python', 'Django', 'Django REST Framework', 'RESTful APIs',
@@ -73,7 +73,7 @@ const caseStudies = {
                 'Keeping UI, business logic, and data sources clearly separated.',
             ],
             highlights: [ 'Private school video lessons', 'Timed MCQ exams', 'Subject-based progress tracking', 'Student notes and saved items', 'Flutter and Django integration' ],
-            outcome: 'Tafouki delivers a structured mobile learning and self-assessment experience, giving students access to lessons, exams, and progress information in one platform.',
+            outcome: 'Tfouki delivers a structured mobile learning and self-assessment experience, giving students access to lessons, exams, and progress information in one platform.',
         },
         ar: {
             overview: 'تفوقي (School on your mobile screen) هو تطبيق ومنصة تعليمية وامتحانية رقمية تساعد المدارس على تقديم الدروس المصورة الخاصة والاختبارات التفاعلية وتتبع تقدم الطلاب بشكل فوري ضمن تجربة منظمة على الهاتف.',

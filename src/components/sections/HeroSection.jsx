@@ -6,7 +6,9 @@ export default function HeroSection({ text, socialLinks }) {
       <div className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-5 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-10">
         <div className="max-w-2xl">
           <h1 className="mb-4 text-3xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">{text.hero_title}</h1>
-          <p className="mb-6 text-base leading-relaxed text-slate-300 sm:text-lg">{text.hero_desc}</p>
+          <p className="mb-4 text-lg font-semibold text-indigo-400 sm:text-xl">{text.hero_role}</p>
+          <p className="mb-4 text-base leading-relaxed text-slate-300 sm:text-lg">{text.hero_desc}</p>
+          <p className="mb-6 flex items-center gap-2 text-sm font-medium text-emerald-300"><span className="h-2 w-2 rounded-full bg-emerald-400"></span>{text.hero_available}</p>
           <div className="mb-8 flex flex-wrap gap-4">
             <a href="#contact" className="rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white transition hover:bg-indigo-500">{text.hero_btn_contact}</a>
             <a href="/cv/aliehammadi-resume.pdf" download="Ali-Hammadi-CV.pdf" className="rounded-xl border border-slate-700 bg-slate-900 px-5 py-3 font-semibold text-slate-200 transition hover:border-indigo-500 hover:text-indigo-400">{text.hero_cv}</a>

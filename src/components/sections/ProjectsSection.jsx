@@ -7,7 +7,7 @@ export default function ProjectsSection({ text, projects, lang, onSelectProject 
         <SectionHeading>{text.projects_heading}</SectionHeading>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <button key={project.id} type="button" onClick={() => onSelectProject(project.id)} className="group block h-full w-full text-left">
+            <button key={project.id} type="button" onClick={() => onSelectProject(project.id)} className="group block h-full w-full text-start">
               <div className="flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-800 bg-slate-900 shadow-lg shadow-slate-950/20 transition hover:border-indigo-500/50">
                 <div className="flex aspect-[4/3] items-center justify-center rounded-[22px] bg-slate-950 p-3 sm:p-4">
                   <img src={project.cover} alt={project.title} className="h-full w-full rounded-2xl object-contain transition duration-500 group-hover:scale-[1.02]" />
